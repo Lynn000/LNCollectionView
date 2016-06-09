@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F49264EB1CF890D900B1812F /* UIScrollView+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F49264EA1CF890D900B1812F /* UIScrollView+CollectionView.m */; };
-		F49264EE1CF8959300B1812F /* LNSmallViewAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = F49264ED1CF8959300B1812F /* LNSmallViewAttr.m */; };
+		F4CEF6001D099B180094972B /* LNSmallViewAttr.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CEF5FD1D099B180094972B /* LNSmallViewAttr.m */; };
+		F4CEF6011D099B180094972B /* UIScrollView+CollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4CEF5FF1D099B180094972B /* UIScrollView+CollectionView.m */; };
 		F4D413691CF749680048D800 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D413681CF749680048D800 /* main.m */; };
 		F4D4136C1CF749680048D800 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D4136B1CF749680048D800 /* AppDelegate.m */; };
 		F4D4136F1CF749680048D800 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4D4136E1CF749680048D800 /* ViewController.m */; };
@@ -18,10 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F49264E91CF890D900B1812F /* UIScrollView+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+CollectionView.h"; sourceTree = "<group>"; };
-		F49264EA1CF890D900B1812F /* UIScrollView+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+CollectionView.m"; sourceTree = "<group>"; };
-		F49264EC1CF8959300B1812F /* LNSmallViewAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LNSmallViewAttr.h; sourceTree = "<group>"; };
-		F49264ED1CF8959300B1812F /* LNSmallViewAttr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LNSmallViewAttr.m; sourceTree = "<group>"; };
+		F4CEF5FC1D099B180094972B /* LNSmallViewAttr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LNSmallViewAttr.h; path = LNCollectionView/LNSmallViewAttr.h; sourceTree = "<group>"; };
+		F4CEF5FD1D099B180094972B /* LNSmallViewAttr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LNSmallViewAttr.m; path = LNCollectionView/LNSmallViewAttr.m; sourceTree = "<group>"; };
+		F4CEF5FE1D099B180094972B /* UIScrollView+CollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+CollectionView.h"; path = "LNCollectionView/UIScrollView+CollectionView.h"; sourceTree = "<group>"; };
+		F4CEF5FF1D099B180094972B /* UIScrollView+CollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+CollectionView.m"; path = "LNCollectionView/UIScrollView+CollectionView.m"; sourceTree = "<group>"; };
 		F4D413641CF749680048D800 /* LNCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LNCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D413681CF749680048D800 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F4D4136A1CF749680048D800 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		F49264EF1CF89D9900B1812F /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				F49264E91CF890D900B1812F /* UIScrollView+CollectionView.h */,
-				F49264EA1CF890D900B1812F /* UIScrollView+CollectionView.m */,
-				F49264EC1CF8959300B1812F /* LNSmallViewAttr.h */,
-				F49264ED1CF8959300B1812F /* LNSmallViewAttr.m */,
+				F4CEF5FC1D099B180094972B /* LNSmallViewAttr.h */,
+				F4CEF5FD1D099B180094972B /* LNSmallViewAttr.m */,
+				F4CEF5FE1D099B180094972B /* UIScrollView+CollectionView.h */,
+				F4CEF5FF1D099B180094972B /* UIScrollView+CollectionView.m */,
 			);
 			name = Lib;
 			sourceTree = "<group>";
@@ -167,11 +167,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F49264EB1CF890D900B1812F /* UIScrollView+CollectionView.m in Sources */,
+				F4CEF6011D099B180094972B /* UIScrollView+CollectionView.m in Sources */,
 				F4D4136F1CF749680048D800 /* ViewController.m in Sources */,
+				F4CEF6001D099B180094972B /* LNSmallViewAttr.m in Sources */,
 				F4D4136C1CF749680048D800 /* AppDelegate.m in Sources */,
 				F4D413691CF749680048D800 /* main.m in Sources */,
-				F49264EE1CF8959300B1812F /* LNSmallViewAttr.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
