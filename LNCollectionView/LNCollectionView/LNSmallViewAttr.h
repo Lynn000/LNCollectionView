@@ -22,6 +22,7 @@
 // 小视图间列间距
 @property (nonatomic,assign) CGFloat smallViewInterMargin;
 
+// 根据传入小视图宽度 高度 距顶部间距 行间距 列间距 创建小视图属性
 + (instancetype)smallViewAttrWithSmallViewW:(CGFloat)smallVW andSmallViewH:(CGFloat)smallVH andSmallViewTopMargin:(CGFloat)smallVTopMargin andSmallViewLineMargin:(CGFloat)smallVLineMargin andSmallViewInterMargin:(CGFloat)smallVInterMargin;
 
 @end
