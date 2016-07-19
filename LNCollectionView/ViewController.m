@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-#import "UIScrollView+CollectionView.h"
+#import "UIView+CollectionView.h"
 
 @interface ViewController ()
 

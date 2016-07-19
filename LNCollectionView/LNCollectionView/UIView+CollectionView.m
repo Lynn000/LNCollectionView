@@ -6,7 +6,7 @@
 //  Copyright © 2016年 lin. All rights reserved.
 //
 
-#import "UIScrollView+CollectionView.h"
+#import "UIView+CollectionView.h"
 
 @implementation UIView (CollectionView)
 
