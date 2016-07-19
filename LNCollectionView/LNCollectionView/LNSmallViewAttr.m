@@ -17,7 +17,7 @@
     attr.smallViewW = smallVW;
     attr.smallViewH = smallVH;
     attr.smallViewInterMargin = smallVInterMargin;
-    attr.smallViewLineMargin = smallVInterMargin;
+    attr.smallViewLineMargin = smallVLineMargin;
     attr.smallViewTopMargin = smallVTopMargin;
     
     return attr;

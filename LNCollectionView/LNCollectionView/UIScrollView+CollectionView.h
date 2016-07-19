@@ -9,12 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LNSmallViewAttr.h"
 
-#define KViewX @"KViewX"
-#define KViewY @"KViewY"
-#define KViewW @"KViewW"
-#define KViewH @"KViewH"
-
-@interface UIScrollView (CollectionView)
+@interface UIView (CollectionView)
 
 // 根据传入的这些数据设置图片方法
 - (NSArray *)setupSmallViewFrameWithSmallViewCount:(NSInteger)smallVCount andColCount:(NSInteger)colCount andSmallViewAttri:(LNSmallViewAttr *)smallViewAttr;

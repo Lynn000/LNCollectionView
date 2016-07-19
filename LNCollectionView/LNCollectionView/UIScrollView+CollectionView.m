@@ -8,7 +8,7 @@
 
 #import "UIScrollView+CollectionView.h"
 
-@implementation UIScrollView (CollectionView)
+@implementation UIView (CollectionView)
 
 
 - (NSArray *)setupSmallViewFrameWithSmallViewCount:(NSInteger)smallVCount andColCount:(NSInteger)colCount andSmallViewAttri:(LNSmallViewAttr *)smallViewAttr{
@@ -30,8 +30,11 @@
         CGFloat viewX = leftMargin + colNum * (smallViewAttr.smallViewW + smallViewAttr.smallViewInterMargin);
         // 计算Y
         CGFloat viewY = smallViewAttr.smallViewTopMargin + rowNum * (smallViewAttr.smallViewH +smallViewAttr.smallViewLineMargin);
-        NSDictionary *frameDict = @{ KViewX:@(viewX), KViewY:@(viewY), KViewW:@(smallViewAttr.smallViewW), KViewH:@(smallViewAttr.smallViewH)};
-        [arrayM addObject:frameDict];
+        
+        CGRect viewFrame = CGRectMake(viewX, viewY, smallViewAttr.smallViewW, smallViewAttr.smallViewH);
+        
+        NSValue *viewF = [NSValue valueWithCGRect:viewFrame];
+        [arrayM addObject:viewF];
         
     }
     

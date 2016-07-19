@@ -12,7 +12,7 @@
 
 @interface ViewController ()
 
-@property (nonatomic,strong) UIScrollView * scrollView;
+@property (nonatomic,strong) UIView * fatherView;
 
 @end
 
@@ -21,13 +21,28 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    LNSmallViewAttr *smallVAttr = [LNSmallViewAttr smallViewAttrWithSmallViewW:80 andSmallViewH:50 andSmallViewTopMargin:60 andSmallViewLineMargin:20 andSmallViewInterMargin:20];
+    self.fatherView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
-    self.scrollView = [[UIScrollView alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.view addSubview:self.fatherView];
     
-    [self.view addSubview:self.scrollView];
+    // 设置子视图个数
+    NSInteger smallViewCount = 6;
+    // 设置子视图列数
+    NSInteger colCount = 2;
+    // 设置子视图宽度
+    CGFloat smallViewW = self.view.bounds.size.width / colCount;
+    // 设置子视图高度
+    CGFloat smallViewH = smallViewW;
+    // 设置距顶部间距
+    CGFloat topMargin = 60;
+    // 设置行间距
+    CGFloat lineMargin = 20;
+    // 设置列间距
+    CGFloat interMargin = 10;
     
-    NSArray *frameArray = [self.scrollView setupSmallViewFrameWithSmallViewCount:6 andColCount:4 andSmallViewAttri:smallVAttr];
+    LNSmallViewAttr *smallVAttr = [LNSmallViewAttr smallViewAttrWithSmallViewW:smallViewW andSmallViewH:smallViewH andSmallViewTopMargin:topMargin andSmallViewLineMargin:lineMargin andSmallViewInterMargin:interMargin];
+    
+    NSArray *frameArray = [self.fatherView setupSmallViewFrameWithSmallViewCount:smallViewCount andColCount:colCount andSmallViewAttri:smallVAttr];
     
     [self setupSmallViewsWithArray:frameArray];
 }
@@ -37,13 +52,15 @@
     
     [frameArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        NSDictionary *dict = obj;
+        NSValue *frameValue = obj;
         
-        UIView *smallV = [[UIView alloc]initWithFrame:CGRectMake([dict[KViewX] floatValue], [dict[KViewY] floatValue], [dict[KViewW] floatValue], [dict[KViewH] floatValue])];
+        CGRect smallViewFrame = [frameValue CGRectValue];
+        
+        UIView *smallV = [[UIView alloc]initWithFrame:smallViewFrame];
         
         smallV.backgroundColor = [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1];
 
-        [self.scrollView addSubview:smallV];
+        [self.fatherView addSubview:smallV];
         
         
     }];
